@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 let verificationToken = null;
 
 // Webhook endpoint
-app.post('/notion-webhook', (req, res) => {
+app.post('/', (req, res) => {
   // Step 1: Handle verification
   if (req.body.verification_token) {
     verificationToken = req.body.verification_token;
